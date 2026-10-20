@@ -1,3 +1,4 @@
-# Route all requests from /rebecca/<filename> to /Rebecca/<filename>.html
-/rebecca/*    /Rebecca/:splat.html    200
-/Rebecca/*    /Rebecca/:splat.html    200
+/Rebecca/261020    /Rebecca/261020.html    200
+/rebecca/261020    /Rebecca/261020.html    200
+/Rebecca/261017    /Rebecca/261017.html    200
+/rebecca/261017    /Rebecca/261017.html    200
