@@ -1,2 +1,3 @@
-/P/* 404
-/P 404
+# Route all requests from /rebecca/<filename> to /Rebecca/<filename>.html
+/rebecca/*    /Rebecca/:splat.html    200
+/Rebecca/*    /Rebecca/:splat.html    200
