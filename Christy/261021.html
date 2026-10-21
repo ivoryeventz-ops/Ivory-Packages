@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Confirmed Quote - Christy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-gold: #c5a059;
+      --gold-dark: #9e7b39;
+      --charcoal: #222222;
+      --text-muted: #555555;
+      --card-bg: #ffffff;
+      --page-bg: #fdfbf7;
+      --border-color: #ebdcc4;
+      --subtle-bg: #faf7f2;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background-color: var(--page-bg);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--page-bg);
+      font-family: 'Montserrat', sans-serif;
+      color: var(--charcoal);
+      line-height: 1.5;
+      padding: 12px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding-bottom: 24px;
+    }
+
+    /* Header & Client Details */
+    .header-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px 16px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .brand-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+
+    .sub-title {
+      font-size: 0.82rem;
+      color: var(--primary-gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      text-align: left;
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+    }
+
+    .info-item {
+      background: var(--subtle-bg);
+      padding: 10px 14px;
+      border-radius: 6px;
+      border-left: 3px solid var(--primary-gold);
+    }
+
+    .info-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #777;
+    }
+
+    .info-value {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* Stage Photo Card */
+    .image-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 14px;
+      margin-bottom: 14px;
+    }
+
+    .image-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--charcoal);
+    }
+
+    .image-wrapper {
+      width: 100%;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Section & Cards */
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px 16px;
+      margin-bottom: 14px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+
+    .section-price {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+    }
+
+    .item-list {
+      list-style: none;
+    }
+
+    .item-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 7px;
+    }
+
+    .item-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      color: var(--primary-gold);
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* Line Item Blocks */
+    .line-item-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .line-item-box {
+      background: var(--subtle-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .line-item-info {
+      flex: 1;
+    }
+
+    .line-item-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .line-item-sublist {
+      list-style: none;
+      padding-left: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .line-item-sublist li {
+      position: relative;
+      margin-bottom: 3px;
+    }
+
+    .line-item-sublist li::before {
+      content: "-";
+      position: absolute;
+      left: -12px;
+    }
+
+    .line-item-price {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      white-space: nowrap;
+    }
+
+    /* Total Row */
+    .total-row-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .total-row-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .total-row-amount {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold-dark);
+      text-align: right;
+    }
+
+    /* Additional Requirements */
+    .specs-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .specs-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+    }
+
+    .spec-block {
+      background: var(--subtle-bg);
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .spec-block strong {
+      display: block;
+      color: var(--charcoal);
+      margin-bottom: 2px;
+    }
+
+    .power-note {
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--charcoal);
+    }
+
+    .strike {
+      text-decoration: line-through;
+      color: #999;
+      font-weight: 500;
+      margin-right: 6px;
+    }
+
+    /* Timeline Subsections for Complimentary Services */
+    .timeline-title {
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-title:first-child {
+      margin-top: 0;
+    }
+
+    /* Payment Terms Table */
+    .payment-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 0.9rem;
+    }
+
+    .payment-table tr {
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .payment-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .payment-table td {
+      padding: 10px 8px;
+      color: #333;
+    }
+
+    .payment-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+      color: var(--charcoal);
+      white-space: nowrap;
+    }
+
+    .payment-table tr.highlight td {
+      font-weight: 700;
+      color: var(--gold-dark);
+      font-size: 0.95rem;
+      background: var(--subtle-bg);
+    }
+
+    /* Printing or saving as PDF: keep each card in one piece and keep the gold accents */
+    @media print {
+      html, body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .header-card, .image-card, .section-card, .total-row-card, .specs-card,
+      .line-item-box, .payment-table tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Block -->
+    <div class="header-card">
+      <h1 class="brand-title">Final Confirmed Decor Quote</h1>
+      <p class="sub-title">Artificial Flowers Setup</p>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-label">Name</div>
+          <div class="info-value">Christy</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Date</div>
+          <div class="info-value">24 October 2026</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Venue</div>
+          <div class="info-value">Loyal Convention Centre, Kumbanad</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finalised Stage Design Photo -->
+    <div class="image-card">
+      <div class="image-title">Finalised Stage Design</div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/bN0J8Jw6/80-(2).jpg" alt="Finalised Stage Design - Christy" />
+      </div>
+    </div>
+
+    <!-- Package 7 Main Scope -->
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-title">Package 7</span>
+        <span class="section-price">&#8377; 1,75,000/-</span>
+      </div>
+      <ul class="item-list">
+        <li>Stage Decoration including</li>
+        <li>White flex on stage/Carpet on stage</li>
+        <li>Floral Settings on stage</li>
+        <li>Lights on stage</li>
+        <li>Single tier cake</li>
+        <li>Podium</li>
+        <li>Table for pastors</li>
+        <li>Chair for pastors</li>
+        <li>Facelights</li>
+        <li>Centre carpet along the aisle</li>
+        <li>Entrance Arch for hall - Artificial flowers</li>
+        <li>Wedding Car Decoration - Fresh flowers</li>
+        <li>Greeting Bouquet - 2 No.s</li>
+        <li>Wedding signage board on wooden easel stand</li>
+        <li>Welcome Girls/Hostess - 2 No.s for assistance on stage &amp; coordinating photosession</li>
+      </ul>
+    </div>
+
+    <!-- Additional Selected Items -->
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-title">Additional Selected Inclusions</span>
+      </div>
+
+      <div class="line-item-group">
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Pathway stands in hall</div>
+          </div>
+          <div class="line-item-price">&#8377; 15,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Entrance arch for hall - Ground Floor</div>
+          </div>
+          <div class="line-item-price">&#8377; 15,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Family Table with existing rectangular tables in hall</div>
+            <ul class="line-item-sublist">
+              <li>Premium centrepieces on family table</li>
+              <li>Premium crockery</li>
+              <li>Floral d&eacute;cor on table</li>
+              <li>Acrylic Chairs - 12 No.s</li>
+            </ul>
+          </div>
+          <div class="line-item-price">&#8377; 10,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Platform for Choir</div>
+          </div>
+          <div class="line-item-price">&#8377; 5,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Ramp onto stage with flowers on either side</div>
+            <ul class="line-item-sublist">
+              <li>20 ft x 8 ft - Rectangular</li>
+            </ul>
+          </div>
+          <div class="line-item-price">&#8377; 30,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">3 Seater white sofa - 2 No.s</div>
+          </div>
+          <div class="line-item-price">&#8377; 15,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">White chair cover with bow for 800 chairs - theatre style</div>
+          </div>
+          <div class="line-item-price">&#8377; 14,400</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Pagoda for juice counter</div>
+          </div>
+          <div class="line-item-price">&#8377; 7,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Tall Men Security</div>
+            <ul class="line-item-sublist">
+              <li>&#8377; 1,500 (4 Hours) x 4 Persons</li>
+            </ul>
+          </div>
+          <div class="line-item-price">&#8377; 6,000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total for Decor Items -->
+    <div class="total-row-card">
+      <div class="total-row-title">Total for above items</div>
+      <div class="total-row-amount">&#8377; 2,92,400</div>
+    </div>
+
+    <!-- Additional / Power Requirement -->
+    <div class="specs-card">
+      <div class="specs-title">Additional</div>
+      <div class="specs-grid">
+        <div class="spec-block">
+          <strong>Power Requirement</strong>
+          7 KVA
+        </div>
+      </div>
+      <p class="power-note"><strong>Please note: in place of 7 KVA,Additional power of 7 KVA for hanging mirchi lights and 20 KVA for ambient lighting will be required only if these add-ons are selected.</strong></p>
+    </div>
+
+    <!-- Additional Options -->
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-title">Additional Options</span>
+      </div>
+
+      <div class="line-item-group">
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Hanging mirchi lights from ceiling of stage</div>
+          </div>
+          <div class="line-item-price"><span class="strike">&#8377; 30,000</span> &#8377; 25,000</div>
+        </div>
+
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="line-item-name">Ambient lighting in hall</div>
+          </div>
+          <div class="line-item-price">&#8377; 30,000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Complimentary Services -->
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-title">Ivory Events Wedding Planner Complimentary Services</span>
+      </div>
+
+      <div class="timeline-title">Day before the wedding:</div>
+      <ul class="item-list" style="margin-bottom: 12px;">
+        <li>Supervision &amp; coordination of all services booked through us</li>
+      </ul>
+
+      <div class="timeline-title">Wedding Day:</div>
+      <ul class="item-list">
+        <li>Guidance &amp; assistance of bridal entry procession into venue</li>
+        <li>Assistance to anchor/master of ceremonies if a member of the family doing the anchoring</li>
+        <li>Guidance &amp; assistance for bridal party entry into the reception hall</li>
+        <li>Songs for bridal entry &amp; cake cutting will be played from the stage</li>
+        <li>Guidance for cake cutting, dress change &amp; photo session on stage</li>
+      </ul>
+    </div>
+
+    <!-- Payment Terms -->
+    <div class="section-card">
+      <div class="section-header">
+        <span class="section-title">Payment Terms</span>
+      </div>
+
+      <table class="payment-table">
+        <tr>
+          <td>Decor Package</td>
+          <td>&#8377;2,50,000</td>
+        </tr>
+        <tr>
+          <td>Tall Men Security</td>
+          <td>&#8377;6,000</td>
+        </tr>
+        <tr>
+          <td>Pagoda for juice counter</td>
+          <td>&#8377;7,000</td>
+        </tr>
+        <tr>
+          <td>3 Seater Sofa - 2 No.s</td>
+          <td>&#8377;15,000</td>
+        </tr>
+        <tr>
+          <td>Chair cover for existing cushion chairs in hall - 800 No.s</td>
+          <td>&#8377;14,400</td>
+        </tr>
+        <tr class="highlight">
+          <td>Total</td>
+          <td>&#8377;2,92,400</td>
+        </tr>
+        <tr>
+          <td>Advance received cash</td>
+          <td>&#8377;20,000</td>
+        </tr>
+        <tr>
+          <td>Advance required on previous day in cash</td>
+          <td>&#8377;1,00,000</td>
+        </tr>
+        <tr class="highlight">
+          <td>Balance</td>
+          <td>&#8377;1,72,400</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>
