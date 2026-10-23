@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Payment Details - Sajan &amp; Athulya</title>
+
+<!-- Link preview (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Ivory Events" />
+<meta property="og:title" content="Payment Details - Sajan &amp; Athulya" />
+<meta property="og:description" content="Ivory Events wedding payment details - 22 October 2026, Puliyoor St Thomas Marthoma Church" />
+<meta property="og:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+<meta property="og:image:alt" content="Ivory Events logo" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: same cards-on-cream system as the Ivory decor quotes. Header card, one card of vendor boxes, and the totals card last. */
+:root {
+  --primary-gold: #c5a059;
+  --gold-dark: #9e7b39;
+  --charcoal: #222222;
+  --text-muted: #555555;
+  --card-bg: #ffffff;
+  --page-bg: #fdfbf7;
+  --border-color: #ebdcc4;
+  --subtle-bg: #faf7f2;
+  --label: #777777;
+  --ok: #3f6a49;
+  --ok-bg: #ecf3e8;
+  --part-bg: #f6ecd6;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background-color: var(--page-bg); -webkit-text-size-adjust: 100%; }
+body {
+  background-color: var(--page-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--charcoal);
+  line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 12px 12px;
+}
+
+.container { max-width: 860px; margin: 0 auto; padding-bottom: 24px; }
+
+.header-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.brand-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.sub-title {
+  font-size: 0.82rem;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.draft-note {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 12px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-dark);
+  background: var(--subtle-bg);
+  margin-bottom: 14px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+.info-item {
+  background: var(--subtle-bg);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-gold);
+  min-width: 0;
+}
+.info-label { font-size: 0.68rem; text-transform: uppercase; font-weight: 600; color: var(--label); }
+.info-value { font-size: 0.92rem; font-weight: 600; color: var(--charcoal); overflow-wrap: anywhere; }
+
+.section-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 18px 16px;
+  margin-bottom: 14px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.line-item-group { display: flex; flex-direction: column; gap: 10px; }
+.line-item-box {
+  background: var(--subtle-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.line-item-info { flex: 1; min-width: 0; }
+.vhead { display: flex; align-items: center; justify-content: space-between; gap: 8px 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.line-item-name { font-size: 0.92rem; font-weight: 600; color: var(--charcoal); overflow-wrap: anywhere; }
+
+.pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.pill.ok { color: var(--ok); background: var(--ok-bg); border: 1px solid #c9dcc3; }
+.pill.part { color: var(--gold-dark); background: var(--part-bg); border: 1px solid var(--primary-gold); }
+
+.amts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px 12px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 8px;
+}
+.amts > div { min-width: 0; }
+.amts dt { font-size: 0.68rem; text-transform: uppercase; font-weight: 600; color: var(--label); }
+.amts dd { font-size: 0.9rem; font-weight: 600; color: var(--charcoal); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.amts dd.nil { color: #9a9288; font-weight: 500; }
+.amts dd.pb { color: var(--gold-dark); font-weight: 700; }
+.amts dd.pb.nil { color: #9a9288; font-weight: 500; }
+
+.sum-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+.sum-row .amount { font-weight: 600; color: var(--charcoal); font-variant-numeric: tabular-nums; text-align: right; }
+.sum-row.strong { color: var(--charcoal); font-weight: 600; border-bottom: 0; }
+.sum-row.strong .amount { color: var(--gold-dark); font-weight: 700; }
+
+.bar-note { margin: 10px 0 16px; font-size: 0.8rem; color: var(--text-muted); }
+.gst { display: block; font-size: 0.68rem; font-weight: 500; color: var(--text-muted); line-height: 1.3; }
+
+.total-row-card {
+  background: var(--subtle-bg);
+  border: 1px solid var(--primary-gold);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.total-row-title { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+.total-row-amount { font-size: 1.25rem; font-weight: 700; color: var(--gold-dark); text-align: right; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 560px) {
+  .amts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="header-card">
+    <h1 class="brand-title">Payment Details</h1>
+    <p class="sub-title">Wedding Payments</p>
+    <div class="draft-note">Payment Details - 261023</div>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label">Name</div>
+        <div class="info-value">Sajan &amp; Athulya Wedding</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Date</div>
+        <div class="info-value">22 October 2026</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Venue</div>
+        <div class="info-value">Puliyoor St Thomas Marthoma Church</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-header">
+      <span class="section-title">Vendor-wise Payments</span>
+    </div>
+    <div class="line-item-group">
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Mercedes Benz S Class</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹25,500</dd></div>
+              <div><dt>Advance</dt><dd class="">₹12,750</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹12,750</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Wedding Choir - Roy Puthoor</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹35,000</dd></div>
+              <div><dt>Advance</dt><dd class="">₹5,000</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹30,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Photo/Video - Tuesday Lights</span><span class="pill part">Part paid</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹1,93,000</dd></div>
+              <div><dt>Advance</dt><dd class="">₹40,000</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹1,40,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="pb">₹13,000</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Live Band</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹60,000</dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹60,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Tall Men Security</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹6,000</dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹6,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Pagoda for juice counter</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹7,000</dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹7,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">MC/Anchor</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹12,000</dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹12,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Dancers</span><span class="pill ok">Settled</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹20,000</dd></div>
+              <div><dt>Advance</dt><dd class="">₹5,000</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹15,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="nil pb">Nil</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Ivory</span><span class="pill part">Part paid</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹4,90,000</dd></div>
+              <div><dt>Advance</dt><dd class="">₹20,000</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹2,00,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="pb">₹2,70,000</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Robins Catering</span><span class="pill part">Part paid</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd>₹5,14,500 <span class="gst">(including GST 5%)</span></dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="">₹50,000</dd></div>
+              <div><dt>Pending Balance</dt><dd class="pb">₹4,64,500</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="line-item-box">
+          <div class="line-item-info">
+            <div class="vhead"><span class="line-item-name">Pagoda for juice counter - in church</span></div>
+            <dl class="amts">
+              <div><dt>Total</dt><dd class="">₹7,000</dd></div>
+              <div><dt>Advance</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Paid 22 Oct</dt><dd class="nil">Nil</dd></div>
+              <div><dt>Pending Balance</dt><dd class="pb">₹7,000</dd></div>
+            </dl>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-header">
+      <span class="section-title">Payment Summary</span>
+    </div>
+    <div class="sum-row"><span>Total Cost</span><span class="amount">₹13,70,000</span></div>
+    <div class="sum-row"><span>Advance Paid</span><span class="amount">₹82,750</span></div>
+    <div class="sum-row"><span>Paid on 22 Oct</span><span class="amount">₹5,32,750</span></div>
+    <div class="sum-row strong"><span>Paid So Far</span><span class="amount">₹6,15,500</span></div>
+    <p class="bar-note">4 of 11 vendors have a Pending Balance</p>
+    <div class="total-row-card">
+      <div class="total-row-title">Pending Balance</div>
+      <div class="total-row-amount">₹7,54,500</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
