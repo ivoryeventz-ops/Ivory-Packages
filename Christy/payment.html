@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Payment Details - Christy</title>
+
+<!-- Link preview (WhatsApp, Facebook, etc.) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Ivory Events" />
+<meta property="og:title" content="Payment Details - Christy" />
+<meta property="og:description" content="Ivory Events payment details - 24 October 2026, Loyal Convention Centre, Kumbanad" />
+<meta property="og:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+<meta property="og:image:alt" content="Ivory Events logo" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary-gold: #c5a059;
+  --gold-dark: #9e7b39;
+  --charcoal: #222222;
+  --text-muted: #555555;
+  --card-bg: #ffffff;
+  --page-bg: #fdfbf7;
+  --border-color: #ebdcc4;
+  --subtle-bg: #faf7f2;
+  --label: #777777;
+  --ok: #3f6a49;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background-color: var(--page-bg); -webkit-text-size-adjust: 100%; }
+body {
+  background-color: var(--page-bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--charcoal);
+  line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 12px 12px;
+}
+
+.container { max-width: 860px; margin: 0 auto; padding-bottom: 24px; }
+
+.header-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px 16px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.brand-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.sub-title {
+  font-size: 0.82rem;
+  color: var(--primary-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.draft-note {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 12px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-dark);
+  background: var(--subtle-bg);
+  margin-bottom: 14px;
+}
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+.info-item {
+  background: var(--subtle-bg);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-gold);
+  min-width: 0;
+}
+.info-label { font-size: 0.68rem; text-transform: uppercase; font-weight: 600; color: var(--label); }
+.info-value { font-size: 0.92rem; font-weight: 600; color: var(--charcoal); overflow-wrap: anywhere; }
+
+.section-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 18px 16px;
+  margin-bottom: 14px;
+}
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.line-item-group { display: flex; flex-direction: column; gap: 10px; }
+.line-item-box {
+  background: var(--subtle-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.line-item-name { font-size: 0.92rem; font-weight: 600; color: var(--charcoal); overflow-wrap: anywhere; min-width: 0; }
+.line-item-amount { font-size: 0.92rem; font-weight: 700; color: var(--gold-dark); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.sum-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+.sum-row .amount { font-weight: 600; color: var(--charcoal); font-variant-numeric: tabular-nums; text-align: right; }
+.sum-row.strong { color: var(--charcoal); font-weight: 600; border-bottom: 0; }
+.sum-row.strong .amount { color: var(--gold-dark); font-weight: 700; }
+.sum-row.discount .amount { color: var(--ok); }
+.sum-row.struck .amount { text-decoration: line-through; color: var(--label); font-weight: 500; }
+.sum-gap { height: 14px; }
+
+.total-row-card {
+  background: var(--subtle-bg);
+  border: 1px solid var(--primary-gold);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+.total-row-title { font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+.total-row-amount { font-size: 1.25rem; font-weight: 700; color: var(--gold-dark); text-align: right; font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header-card">
+    <h1 class="brand-title">Payment Details</h1>
+    <p class="sub-title">Ivory Events</p>
+    <div class="draft-note">Payment Details - 241026</div>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <div class="info-label">Client Name</div>
+        <div class="info-value">Christy</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Date</div>
+        <div class="info-value">24 October 2026</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Venue</div>
+        <div class="info-value">Loyal Convention Centre, Kumbanad</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-header">
+      <span class="section-title">Package &amp; Add-ons</span>
+    </div>
+    <div class="line-item-group">
+      <div class="line-item-box"><span class="line-item-name">Decor Package</span><span class="line-item-amount">₹2,50,000</span></div>
+      <div class="line-item-box"><span class="line-item-name">Tall Men Security</span><span class="line-item-amount">₹6,000</span></div>
+      <div class="line-item-box"><span class="line-item-name">Pagoda for juice counter</span><span class="line-item-amount">₹7,000</span></div>
+      <div class="line-item-box"><span class="line-item-name">3 Seater Sofa - 2 Nos</span><span class="line-item-amount">₹15,000</span></div>
+      <div class="line-item-box"><span class="line-item-name">Chair cover for existing cushion chairs in hall - 800 Nos</span><span class="line-item-amount">₹14,400</span></div>
+      <div class="line-item-box"><span class="line-item-name">Mirchi hanging lights from ceiling</span><span class="line-item-amount">₹25,000</span></div>
+      <div class="line-item-box"><span class="line-item-name">Ambiance lighting</span><span class="line-item-amount">₹30,000</span></div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div class="section-header">
+      <span class="section-title">Payment Summary</span>
+    </div>
+    <div class="sum-row struck"><span>Total</span><span class="amount">₹3,47,400</span></div>
+    <div class="sum-row discount"><span>Discount</span><span class="amount">− ₹7,400</span></div>
+    <div class="sum-row strong"><span>Discounted Total</span><span class="amount">₹3,40,000</span></div>
+    <div class="sum-gap"></div>
+    <div class="sum-row"><span>Advance Received</span><span class="amount">₹20,000</span></div>
+    <div class="sum-row"><span>Advance Received on 23 Oct</span><span class="amount">₹95,000</span></div>
+    <div class="sum-row strong"><span>Paid So Far</span><span class="amount">₹1,15,000</span></div>
+    <div class="total-row-card">
+      <div class="total-row-title">Balance</div>
+      <div class="total-row-amount">₹2,25,000</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
