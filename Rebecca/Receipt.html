@@ -1,162 +1,168 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Ivory Events Receipt</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  /* Layout: one centred receipt card on a warm page, matching the Ivory Events quote style */
-  :root {
-    --gold: #c5a059;
-    --gold-dark: #9e7b39;
-    --ink: #222222;
-    --muted: #666055;
-    --card: #ffffff;
-    --bg: #fdfbf7;
-    --line: #ebdcc4;
-    --subtle: #faf7f2;
-    --ok-bg: #e5f4e4;
-    --ok-fg: #2d6a2a;
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --gold: #d4b06a; --gold-dark: #d9b873; --ink: #f1ece2; --muted: #b3aa9a;
-      --card: #24211c; --bg: #1a1814; --line: #3d372c; --subtle: #2c2822;
-      --ok-bg: #243a24; --ok-fg: #9fd69b; color-scheme: dark;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Receipt - Rebecca</title>
+
+  <!-- Link preview (WhatsApp, Facebook, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Ivory Events" />
+  <meta property="og:title" content="Payment Receipt - Rebecca" />
+  <meta property="og:description" content="Ivory Events payment receipt - Wedding of Joel &amp; Rebecca, 14 November 2026" />
+  <meta property="og:url" content="https://ivory-packages.pages.dev/Rebecca/receipt" />
+  <meta property="og:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+  <meta property="og:image:alt" content="Ivory Events logo" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://ivory-packages.pages.dev/ivory-logo.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c5a059;
+      --gold-dark: #9e7b39;
+      --ink: #222222;
+      --muted: #666055;
+      --card: #ffffff;
+      --bg: #fdfbf7;
+      --line: #ebdcc4;
+      --subtle: #faf7f2;
+      --ok-bg: #e5f4e4;
+      --ok-fg: #2d6a2a;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
     }
-  }
-  :root[data-theme="dark"] {
-    --gold: #d4b06a; --gold-dark: #d9b873; --ink: #f1ece2; --muted: #b3aa9a;
-    --card: #24211c; --bg: #1a1814; --line: #3d372c; --subtle: #2c2822;
-    --ok-bg: #243a24; --ok-fg: #9fd69b; color-scheme: dark;
-  }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --gold: #d4b06a; --gold-dark: #d9b873; --ink: #f1ece2; --muted: #b3aa9a;
+        --card: #24211c; --bg: #1a1814; --line: #3d372c; --subtle: #2c2822;
+        --ok-bg: #243a24; --ok-fg: #9fd69b; color-scheme: dark;
+      }
+    }
 
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: var(--font-body);
-    line-height: 1.5;
-    padding-block: 20px 32px;
-    padding-left: max(16px, env(safe-area-inset-left, 0px));
-    padding-right: max(16px, env(safe-area-inset-right, 0px));
-  }
-  .wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      padding: 20px 16px 32px;
+    }
+    .wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
 
-  .head, .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-  }
-  .head { padding: 22px 18px 18px; text-align: center; }
-  .brand {
-    font-family: var(--font-display);
-    font-size: 1.9rem; font-weight: 700; letter-spacing: 1px;
-    text-transform: uppercase; margin: 0; line-height: 1.15;
-  }
-  .tag {
-    font-size: 0.78rem; font-weight: 600; letter-spacing: 2px;
-    text-transform: uppercase; color: var(--gold); margin: 4px 0 14px;
-  }
-  .pill {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 5px 14px; border-radius: 20px;
-    background: var(--ok-bg); color: var(--ok-fg);
-    font-size: 0.74rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-  }
-  .pill::before {
-    content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor;
-  }
+    .head, .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .head { padding: 22px 18px 18px; text-align: center; }
+    .brand {
+      font-family: var(--font-display);
+      font-size: 1.9rem; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; margin: 0; line-height: 1.15;
+    }
+    .tag {
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold); margin: 4px 0 14px;
+    }
+    .pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 5px 14px; border-radius: 20px;
+      background: var(--ok-bg); color: var(--ok-fg);
+      font-size: 0.74rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    }
+    .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .rdate { margin: 12px 0 0; font-size: 0.8rem; color: var(--muted); }
+    .rdate strong { color: var(--ink); font-weight: 600; }
 
-  .rdate { margin: 12px 0 0; font-size: 0.8rem; color: var(--muted); }
-  .rdate strong { color: var(--ink); font-weight: 600; }
-  .card { padding: 18px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
-  .item {
-    background: var(--subtle); border-left: 3px solid var(--gold);
-    border-radius: 6px; padding: 10px 14px; min-width: 0;
-  }
-  .label {
-    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.8px;
-    text-transform: uppercase; color: var(--muted);
-  }
-  .value { font-size: 0.95rem; font-weight: 600; overflow-wrap: anywhere; }
+    .card { padding: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; }
+    .item {
+      background: var(--subtle); border-left: 3px solid var(--gold);
+      border-radius: 6px; padding: 10px 14px; min-width: 0;
+    }
+    .label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .value { font-size: 0.95rem; font-weight: 600; overflow-wrap: anywhere; }
 
-  .sec-title {
-    font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
-    margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
-  }
-  .service {
-    display: flex; justify-content: space-between; align-items: baseline;
-    gap: 16px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 600;
-  }
-  .service span:last-child {
-    color: var(--gold-dark); font-variant-numeric: tabular-nums; white-space: nowrap;
-  }
-  .words { margin: 10px 0 0; font-size: 0.8rem; color: var(--muted); }
+    .sec-title {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 700;
+      margin: 0 0 10px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+    }
+    .service {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 16px; flex-wrap: wrap; font-size: 0.95rem; font-weight: 600;
+    }
+    .words { margin: 10px 0 0; font-size: 0.8rem; color: var(--muted); }
 
-  .total {
-    border: 2px solid var(--gold); background: var(--subtle);
-    border-radius: 8px; padding: 14px 18px;
-    display: flex; justify-content: space-between; align-items: center;
-    gap: 12px; flex-wrap: wrap;
-  }
-  .total .t { font-size: 1rem; font-weight: 700; }
-  .total .a {
-    font-size: 1.45rem; font-weight: 700; color: var(--gold-dark);
-    font-variant-numeric: tabular-nums;
-  }
+    .total {
+      border: 2px solid var(--gold); background: var(--subtle);
+      border-radius: 8px; padding: 14px 18px;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .total .t { font-size: 1rem; font-weight: 700; }
+    .total .a {
+      font-size: 1.45rem; font-weight: 700; color: var(--gold-dark);
+      font-variant-numeric: tabular-nums;
+    }
 
-  .foot { text-align: center; font-size: 0.78rem; color: var(--muted); padding: 4px 8px; }
-  .foot strong { color: var(--ink); font-weight: 600; }
-</style>
+    .foot { text-align: center; font-size: 0.78rem; color: var(--muted); padding: 4px 8px; }
+    .foot strong { color: var(--ink); font-weight: 600; }
+  </style>
+</head>
+<body>
 
-<div class="wrap">
-  <div class="head">
-    <h1 class="brand">Ivory Events</h1>
-    <p class="tag">Payment Receipt</p>
-    <span class="pill">Payment received</span>
-    <p class="rdate">Receipt date: <strong>15 November 2026</strong></p>
-  </div>
+  <div class="wrap">
+    <div class="head">
+      <h1 class="brand">Ivory Events</h1>
+      <p class="tag">Payment Receipt</p>
+      <span class="pill">Payment received</span>
+      <p class="rdate">Receipt date: <strong>15 November 2026</strong></p>
+    </div>
 
-  <div class="card">
-    <div class="grid">
-      <div class="item">
-        <div class="label">Received from</div>
-        <div class="value">Mr. Moncy Varghese</div>
+    <div class="card">
+      <div class="grid">
+        <div class="item">
+          <div class="label">Received from</div>
+          <div class="value">Mr. Moncy Varghese</div>
+        </div>
+        <div class="item">
+          <div class="label">Event</div>
+          <div class="value">Wedding of Joel &amp; Rebecca<br>14 November 2026</div>
+        </div>
+        <div class="item">
+          <div class="label">Venue</div>
+          <div class="value">Believers Convention Centre</div>
+        </div>
       </div>
-      <div class="item">
-        <div class="label">Event</div>
-        <div class="value">Wedding of Joel &amp; Rebecca<br>14 November 2026</div>
+    </div>
+
+    <div class="card">
+      <h2 class="sec-title">Services</h2>
+      <div class="service">
+        <span>Decoration &amp; Event Management Services</span>
       </div>
-      <div class="item">
-        <div class="label">Venue</div>
-        <div class="value">Believers Convention Centre</div>
-      </div>
+      <p class="words">Quote reference 261103</p>
+    </div>
+
+    <div class="total">
+      <span class="t">Total amount received</span>
+      <span class="a">&#8377; 3,05,000</span>
+    </div>
+    <p class="words" style="text-align:center;margin-top:-4px">Rupees Three Lakh Five Thousand Only</p>
+
+    <div class="foot">
+      <p><strong>Thank you for choosing Ivory Events.</strong><br>
+      This is a digital receipt and does not require a signature.</p>
     </div>
   </div>
 
-  <div class="card">
-    <h2 class="sec-title">Services</h2>
-    <div class="service">
-      <span>Decoration &amp; Event Management Services</span>
-    </div>
-    <p class="words">Quote reference 261103</p>
-  </div>
-
-  <div class="total">
-    <span class="t">Total amount received</span>
-    <span class="a">&#8377; 3,05,000</span>
-  </div>
-  <p class="words" style="text-align:center;margin-top:-4px">Rupees Three Lakh Five Thousand Only</p>
-
-  <div class="foot">
-    <p><strong>Thank you for choosing Ivory Events.</strong><br>
-    This is a digital receipt and does not require a signature.</p>
-  </div>
-</div>
-
-</body></html>
+</body>
+</html>
